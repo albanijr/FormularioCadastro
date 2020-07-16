@@ -1,0 +1,109 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/bootstrap.css" />
+    <link rel="stylesheet" href="css/fontawesome.css" />
+    <link rel="stylesheet" href="css/toastr.css" />
+    <link rel="stylesheet" href="css/jquery-ui.css" />
+    <title>Formulário de Cadastro</title>
+</head>
+<body>
+    <div class="card">
+        <div class="card-header text-center vertical-middle">
+            <div class="row">
+                <h5 class="card-title ml-3 mr-auto"><strong>Formulário de Cadastro</strong></h5>
+            </div>
+        </div>
+        <div class="card-body">
+            <form id="formUser" autocomplete="off">
+                <div class="col-md-6 offset-md-3">
+                    <div class="row form-group">
+                        <div class="col-md-12">
+                            <label for="inputNome">Nome Completo</label>
+                            <input type="text" class="form-control" id="inputNome" placeholder="Fulano de Tal" required>
+                        </div>
+                    </div>
+                    <div class="row form-group">
+                        <div class="col-md-6">
+                            <label for="inputDataNascimento">Data de Nascimento</label>
+                            <input class="form-control" type="date" value="" id="inputDataNascimento" required>
+                        </div>
+                        <div class="col-md-6">
+                            <label for="inputCpf">CPF</label>
+                            <input class="form-control" type="text" id="inputCpf" maxlength="11" required>
+                        </div>
+                    </div>
+                    <div class="row form-group">
+                        <div class="col-md-6">
+                            <label for="inputCelular">Celular</label>
+                            <input class="form-control" type="tel" id="inputCelular" maxlength="11" required>
+                        </div>
+                        <div class="col-md-6">
+                            <label for="inputEmail">E-mail</label>
+                            <input type="email" class="form-control" id="inputEmail" placeholder="name@example.com" required>
+                        </div>
+                    </div>
+                    <div class="row form-group">
+                        <div class="col-md-6">
+                            <label for="inputCEP">CEP</label>
+                            <input type="number" class="form-control" id="inputCEP" maxlength="9" placeholder="99999-999" required>
+                        </div>
+                        <div class="py-4">
+                            <button onclick="onSubmitClick()" type="button" class="btn btn-info">Consultar</button>
+                        </div>
+                    </div>
+                    <div class="row form-group">
+                        <div class="col-md-6">
+                            <label for="inputLogra">Logradouro</label>
+                            <input type="text" class="form-control" id="inputLogra" placeholder="Av. Exemplo" required>
+                        </div>
+                        <div class="col-md-2">
+                            <label for="inputNumero">Número</label>
+                            <input type="number" class="form-control" id="inputNumero" placeholder="1234" required>
+                        </div>
+                        <div class="col-md-4">
+                            <label for="inputComplemento">Complemento</label>
+                            <input type="text" class="form-control" id="inputComplemento" placeholder="Ex: Casa, Apto, Bloco...">
+                        </div>
+                    </div>
+                    <div class="row form-group">
+                        <div class="col-md-6">
+                            <label for="inputBairro">Bairro</label>
+                            <input type="text" class="form-control" id="inputComplemento" placeholder="Bairro" required>
+                        </div>
+                        <div class="col-md-4">
+                            <label for="inputCidade">Cidade</label>
+                            <input type="text" class="form-control" id="inputCidade" placeholder="Cidade" required>
+                        </div>
+                        <div class="col-md-2">
+                            <label for="inputEstado">UF</label>
+                            <input type="text" class="form-control" id="inputEstado" placeholder="UF" required>
+                        </div>
+                    </div>
+                    <div class="row form-group">
+                        <div class="col-md-12">
+                            <label for="inputDescricao">Descrição</label>
+                            <textarea class="form-control" id="inputDescricao" rows="6"  required></textarea>
+                        </div>
+                    </div>
+                </div>
+                <div class="row form-group">
+                    <div class="col-md-12 text-center">
+                        <button type="submit" class="btn btn-success">Salvar</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+    <script src="js/jquery.js"></script>
+    <script src="js/jquery-ui.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <script src="js/fontawesome.js"></script>
+    <script src="js/toastr.js"></script>
+    <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script type="text/javascript" src="js/Script1.js"></script>
+</body>
+</html>
