@@ -1,51 +1,45 @@
-// JavaScript source code
-$(() => {
-	function mascara(i) {
+// JavaScript source code create by Albani Júnior
 
-		var v = i.value;
+function mascaraCpf(i) {
 
-		if (isNaN(v[v.length - 1])) { // impede entrar outro caractere que n�o seja n�mero
-			i.value = v.substring(0, v.length - 1);
-			return;
-		}
+    var v = i.value;
 
-		i.setAttribute("maxlength", "14");
-		if (v.length == 3 || v.length == 7) i.value += ".";
-		if (v.length == 11) i.value += "-";
+    if (isNaN(v[v.length - 1])) { // impede entrar outro caractere que nao seja n�mero
+        i.value = v.substring(0, v.length - 1);
+        return;
+    }
 
-	}
+    i.setAttribute("maxlength", "14");
+    if (v.length == 3 || v.length == 7) i.value += ".";
+    if (v.length == 11) i.value += "-";
 
-	$(function(){
-		function onAjaxSuccess(data) {
-			if(data.result == 200) {
-				document.getElementById("inputLogra").value = data.data['logradouro'];
-				document.getElementById("inputBairro").value = data.data.bairro;
-				document.getElementById("inputCidade").value = data.data.cidade;
-				document.getElementById("inputEstado").value = data.data.estado;
-				document.getElementById("inputLogra").disabled = disabled;
-				document.getElementById("inputBairro").disabled = disabled;
-				document.getElementById("inputCidade").disabled = disabled;
-				document.getElementById("inputEstado").disabled = disabled;
-			} else {
-				onAjaxError(data);
-			} 
-		}
+}
 
-		function onAjaxError(data) {
-			$("#result_content")
-				.empty()
-				.append(JSON.stringify(data))
-				.show("slow");
-		}
+function mascaraCep(i) {
 
-		function onSubmitClick() {
-			$("#result_content").hide("slow");
-			alert("AQUI");
-			$.getJSON("https://api.postmon.com.br/v1/cep/" + $("#inputCEP").val()).
-					success(onAjaxSuccess).
-					error(onAjaxError);
-		}
+    var v = i.value;
 
-		$("#button").click(onSubmitClick);
-	});
-});
+    if (isNaN(v[v.length - 1])) { // impede entrar outro caractere que nao seja n�mero
+        i.value = v.substring(0, v.length - 1);
+        return;
+    }
+
+    i.setAttribute("maxlength", "9");
+    if (v.length == 5) i.value += "-";
+
+}
+
+function onSubmitClick() {
+
+    $.getJSON("https://api.postmon.com.br/v1/cep/" + $("#inputCEP").val(),
+        function (result) {
+            document.getElementById("inputLogra").value = result['logradouro'];
+            document.getElementById("inputBairro").value = result['bairro'];
+            document.getElementById("inputCidade").value = result['cidade'];
+            document.getElementById("inputEstado").value = result['estado'];
+            document.getElementById("inputLogra").disabled = true;
+            document.getElementById("inputBairro").disabled = true;
+            document.getElementById("inputCidade").disabled = true;
+            document.getElementById("inputEstado").disabled = true;
+        });
+}

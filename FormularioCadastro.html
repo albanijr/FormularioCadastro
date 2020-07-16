@@ -33,7 +33,7 @@
                         </div>
                         <div class="col-md-6">
                             <label for="inputCpf">CPF</label>
-                            <input class="form-control" type="text" id="inputCpf" maxlength="11" required>
+                            <input class="form-control" type="text" id="inputCpf" oninput="mascaraCpf(this)" maxlength="11" required>
                         </div>
                     </div>
                     <div class="row form-group">
@@ -49,10 +49,10 @@
                     <div class="row form-group">
                         <div class="col-md-6">
                             <label for="inputCEP">CEP</label>
-                            <input type="number" class="form-control" id="inputCEP" maxlength="9" placeholder="99999-999" required>
+                            <input type="text" class="form-control" id="inputCEP" oninput="mascaraCep(this)" maxlength="9" placeholder="99999-999" required>
                         </div>
                         <div class="py-4">
-                            <button onclick="onSubmitClick()" type="button" class="btn btn-info">Consultar</button>
+                            <button type="button" onclick="onSubmitClick()" class="btn btn-info">Consultar</button>
                         </div>
                     </div>
                     <div class="row form-group">
@@ -72,7 +72,7 @@
                     <div class="row form-group">
                         <div class="col-md-6">
                             <label for="inputBairro">Bairro</label>
-                            <input type="text" class="form-control" id="inputComplemento" placeholder="Bairro" required>
+                            <input type="text" class="form-control" id="inputBairro" placeholder="Bairro" required>
                         </div>
                         <div class="col-md-4">
                             <label for="inputCidade">Cidade</label>
@@ -103,7 +103,6 @@
     <script src="js/bootstrap.js"></script>
     <script src="js/fontawesome.js"></script>
     <script src="js/toastr.js"></script>
-    <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
     <script type="text/javascript" src="js/Script1.js"></script>
 </body>
 </html>
