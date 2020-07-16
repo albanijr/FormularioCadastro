@@ -52,7 +52,7 @@
                             <input type="text" class="form-control" id="inputCEP" oninput="mascaraCep(this)" maxlength="9" placeholder="99999-999" required>
                         </div>
                         <div class="py-4">
-                            <button type="button" onclick="onSubmitClick()" class="btn btn-info">Consultar</button>
+                            <button type="button" onclick="buscarCepDados()" class="btn btn-info">Consultar</button>
                         </div>
                     </div>
                     <div class="row form-group">
@@ -85,14 +85,14 @@
                     </div>
                     <div class="row form-group">
                         <div class="col-md-12">
-                            <label for="inputDescricao">Descrição</label>
+                            <label for="inputDescricao">Descrição (Bio)</label>
                             <textarea class="form-control" id="inputDescricao" rows="6"  required></textarea>
                         </div>
                     </div>
                 </div>
                 <div class="row form-group">
                     <div class="col-md-12 text-center">
-                        <button type="submit" class="btn btn-success">Salvar</button>
+                        <button type="submit" onclick="onSubmitClick()" class="btn btn-success">Salvar</button>
                     </div>
                 </div>
             </form>
