@@ -47,5 +47,5 @@ function buscarCepDados() {
 function onSubmitClick() {
     var dadoscorretos = ["Nome Completo:", "Data de Nascimento", "CPF", "Celular", "E-mail", "CEP", "Logradouro", "Número", "Complemento", "Bairro", "Cidade", "UF", "Descrição(Bio)"];
     var dados = [$("#inputNome").val(), $("#inputDataNascimento").val(), $("#inputCpf").val(), $("#inputCelular").val(), $("#inputEmail").val(), $("#inputNumero").val(), $("#inputComplemento").val(), $("#inputBairro").val(), $("#inputCidade").val(), $("#inputEstado").val(), $("#inputDescricao").val()];
-    Console.log(dadoscorretos + dados);
+    console.log(dadoscorretos + dados);
 }
